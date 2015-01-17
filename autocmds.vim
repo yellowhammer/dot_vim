@@ -11,7 +11,7 @@ if has("autocmd")
     autocmd BufNewFile,BufEnter * set formatoptions-=o
 
     " No more complaining about untitled documents
-    autocmd FocusLost silent! :wa
+    autocmd BufLeave,FocusLost * silent! wall
 
     " When editing a file, always jump to the last cursor position.
     " This must be after the uncompress commands.
