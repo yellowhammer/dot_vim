@@ -2,6 +2,19 @@
 #
 # setup the Vim Configuration of Champions
 
+echo "This will delete your ~/.vim folder."
+read -p "Continue? [yn]" answer
+case ${answer:0:1} in
+    y|Y )
+        echo "Continuing with installation"
+    ;;
+    * )
+        exit
+    ;;
+esac
+rm -rf ~/.vim
+ln -s $(pwd) ~/.vim
+
 info () {
   printf "  [ \033[00;34m..\033[0m ] $1\n"
 }
