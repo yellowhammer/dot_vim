@@ -5,15 +5,28 @@
 " Set leader to ,
 " Note: This line MUST come before any <leader> mappings
 let mapleader=","
-let maplocalleader = "\\"
+" let maplocalleader = "\\"
+
+" Stuff that doesn't replace default things
+" File tree browser
+nmap \            :NERDTreeToggle<CR>
+" File tree browser showing current file - pipe (shift-backslash)
+nmap \|           :NERDTreeFind<CR>
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>""
+nmap <leader>/    :TComment<CR>
+vmap <leader>/    :TComment<CR>
+nmap <leader>?    :TCommentBlock<CR>
+vmap <leader>?    :TCommentBlock<CR>
+nmap <D-N>       :CtrlP<CR>
+nmap <C-p>       :CtrlP<CR>
 
 " -----------------------
 " Unmapped While Learning
 " -----------------------
 
 " No-op ^ and $ while learning H and L
-noremap ^ <nop>
-noremap $ <nop>
+" noremap ^ <nop>
+" noremap $ <nop>
 nnoremap <leader>sc <nop>
 
 " ---------------
@@ -103,10 +116,8 @@ vnoremap <C-k> 15gkzz
 " ---------------
 
 " Let's make escape better, together.
-inoremap jk <Esc>
-inoremap JK <Esc>
-inoremap Jk <Esc>
-inoremap jK <Esc>
+inoremap kk <Esc>
+inoremap KK <Esc>
 
 " ---------------
 " Leader Mappings
@@ -183,14 +194,16 @@ iabbrev clg console.log
 " from http://stackoverflow.com/a/17096082/22423
 if has("mac") || has("gui_macvim") || has("gui_mac")
   " relative path  (src/foo.txt)
-  nnoremap <silent> <leader>yp :let @*=expand("%")<CR>
+  " nnoremap <silent> <leader>yp :let @*=expand("%")<CR>
 
   " absolute path  (/something/src/foo.txt)
-  nnoremap <silent> <leader>yP :let @*=expand("%:p")<CR>
+  " nnoremap <silent> <leader>yP :let @*=expand("%:p")<CR>
 
   " filename       (foo.txt)
-  nnoremap <silent> <leader>yf :let @*=expand("%:t")<CR>
+  " nnoremap <silent> <leader>yf :let @*=expand("%:t")<CR>
 
   " directory name (/something/src)
-  nnoremap <silent> <leader>yd :let @*=expand("%:p:h")<CR>
+  " nnoremap <silent> <leader>yd :let @*=expand("%:p:h")<CR>
+  map <silent> <D-C> :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
+  map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%").":".line(".")<CR>
 endif
