@@ -46,11 +46,15 @@ dependencies.
   installed.
 * [Source Code for Powerline](http://git.io/H3fYBg) The custom font I'm using
   for vim-airline.
+* [underscore-cli](https://github.com/ddopson/underscore-cli) for sweet JSON
+  formatting.
+
+## Plugin Options
+  If you want a faster ctrl p, then add this plugin
 * [CtrlP C Matching Extension](https://github.com/JazzCore/ctrlp-cmatcher)
   requires compilation. See the steps [in its
   readme](https://github.com/JazzCore/ctrlp-cmatcher).
-* [underscore-cli](https://github.com/ddopson/underscore-cli) for sweet JSON
-  formatting.
+
 
 ## Mappings
 
