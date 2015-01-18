@@ -17,8 +17,10 @@ nmap <leader>/    :TComment<CR>
 vmap <leader>/    :TComment<CR>
 nmap <leader>?    :TCommentBlock<CR>
 vmap <leader>?    :TCommentBlock<CR>
-nmap <D-N>       :CtrlP<CR>
-nmap <C-p>       :CtrlP<CR>
+nmap <D-N>         :CtrlP<CR>
+nmap <D-e>         :FufBuffer<CR>
+nmap <D-t>         :tabnew<CR>
+nmap <C-p>         :CtrlP<CR>
 
 " -----------------------
 " Unmapped While Learning
