@@ -13,6 +13,7 @@ nmap \            :NERDTreeToggle<CR>
 " File tree browser showing current file - pipe (shift-backslash)
 nmap \|           :NERDTreeFind<CR>
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>""
+map <leader>/     :TComment<CR>
 nmap <leader>/    :TComment<CR>
 vmap <leader>/    :TComment<CR>
 nmap <leader>?    :TCommentBlock<CR>

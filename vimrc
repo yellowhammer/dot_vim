@@ -24,3 +24,11 @@ source ~/.vim/plugins.vim
 source ~/.vim/functions.vim
 " Auto commands.
 source ~/.vim/autocmds.vim
+
+
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP> 
+noremap <Right> <NOP>
+inoremap jj <ESC>
+let mapleader = ","
