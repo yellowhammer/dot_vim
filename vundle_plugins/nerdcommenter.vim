@@ -1,4 +1,4 @@
 if exists('g:vundle_installing_plugins')
-  Plugin 'tpope/vim-repeat'
+  Plugin 'scrooloose/nerdcommenter'
   finish
 endif

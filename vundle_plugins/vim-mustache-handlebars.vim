@@ -1,4 +1,4 @@
 if exists('g:vundle_installing_plugins')
-  Plugin 'groenewege/vim-less'
+  Plugin 'mustache/vim-mustache-handlebars'
   finish
 endif
