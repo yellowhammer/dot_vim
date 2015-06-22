@@ -1,4 +1,4 @@
 if exists('g:vundle_installing_plugins')
-  Plugin 'digitaltoad/vim-jade'
+  Plugin 'scrooloose/nerdcommenter'
   finish
 endif
